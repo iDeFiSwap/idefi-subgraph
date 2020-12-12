@@ -1,16 +1,16 @@
 specVersion: 0.0.2
-description: Uniswap is a decentralized protocol for automated token exchange on Ethereum.
-repository: https://github.com/Uniswap/uniswap-v2-subgraph
+description: Idefi is a decentralized protocol for automated token exchange on Ethereum.
+repository: https://github.com/iDeFiSwap/idefi-subgraph
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: mainnet
+    network: rinkeby
     source:
-      address: '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
+      address: '0xefd24AFf3F64ef77f9f3f1be86B40D901961B38c'
       abi: Factory
-      startBlock: 10000834
+      startBlock: 7705250
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
@@ -34,7 +34,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pair
-    network: mainnet
+    network: rinkeby
     source:
       abi: Pair
     mapping:
